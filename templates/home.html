@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="card">
+    <h2>Welcome, {{ user.name }}</h2>
+    <p>You have {{ unread_count }} unread notifications.</p>
+  </div>
+
+  <div class="card">
+    <h3>Recent Orders</h3>
+    <ul>
+      {% for order in recent_orders %}
+        <li>#{{ order.id }} — {{ order.item }} ({{ order.status }})</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}
