@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title if title else "My App" }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="nav">
+    <div class="brand">My App</div>
+    <div class="nav-right">
+      <a href="{{ url_for('home') }}">Home</a>
+      <a href="{{ url_for('notifications') }}">Notifications</a>
+      <a href="{{ url_for('orders') }}">Orders</a>
+      <a href="{{ url_for('profile') }}">Profile</a>
+    </div>
+  </div>
+
+  <div class="container">
+    {% block content %}{% endblock %}
+  </div>
+</body>
+</html>
