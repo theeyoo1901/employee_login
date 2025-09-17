@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="card">
+    <h2>User Profile</h2>
+    <form method="POST">
+      <label>Name:</label><br>
+      <input type="text" name="name" value="{{ user.name }}"><br><br>
+
+      <label>Email:</label><br>
+      <input type="email" name="email" value="{{ user.email }}"><br><br>
+
+      <label>Bio:</label><br>
+      <textarea name="bio">{{ user.bio }}</textarea><br><br>
+
+      <button type="submit">Update</button>
+    </form>
+  </div>
+{% endblock %}
