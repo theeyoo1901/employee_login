@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="card">
+    <h2>Notifications</h2>
+    <ul>
+      {% for n in notifications %}
+        <li>
+          {{ n.text }} {% if not n.read %}<b>(Unread)</b>{% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}
